@@ -1,0 +1,96 @@
+{
+  "raw": {
+    "s11_shape": [
+      200,
+      1001,
+      72
+    ],
+    "s11_dtype": "complex128",
+    "metadata_rows": 200,
+    "metadata_columns": [
+      "n_expt",
+      "id",
+      "phant_id",
+      "tum_diam",
+      "tum_shape",
+      "tum_x",
+      "tum_y",
+      "tum_z",
+      "birads",
+      "adi_ref_id",
+      "emp_ref_id",
+      "date",
+      "n_session",
+      "ant_rad",
+      "ant_z",
+      "fib_ang",
+      "adi_x",
+      "adi_y",
+      "fib_ref_id",
+      "fib_x",
+      "fib_y",
+      "tum_in_fib"
+    ]
+  },
+  "s11_checks": {
+    "nan_values": 0,
+    "inf_values": 0,
+    "all_zero_scans": 0,
+    "exact_duplicate_scans": 0,
+    "max_abs_s11": 0.2581147907805527,
+    "passive_ok_(|S11|<=1)": true
+  },
+  "metadata_checks": {
+    "id_unique": true,
+    "tumor_scans": 100,
+    "reference_scans": 100,
+    "tumor_fields_consistent": true,
+    "tum_z_values": [
+      -6.5
+    ],
+    "pairing": {
+      "ref_exists": true,
+      "ref_is_healthy": true,
+      "same_phantom": true,
+      "same_session": true,
+      "same_date": true,
+      "same_empty_ref": true,
+      "each_reference_used_once": true,
+      "reference_is_next_row_(notebook_assumption)": true
+    },
+    "locations_per_phantom_max": 1,
+    "label_values_valid": true
+  },
+  "delta_checks": {
+    "shape": [
+      100,
+      1001,
+      72
+    ],
+    "nan_or_inf": 0,
+    "duplicate_feature_rows": 0,
+    "robust_z_outliers_(|z|>5)": []
+  },
+  "split": {
+    "test_phantoms": [
+      "A16F11",
+      "A16F14",
+      "A2F1",
+      "A2F11",
+      "A3F11"
+    ],
+    "n_train": 75,
+    "n_test": 25,
+    "phantoms_per_class": {
+      "(-,-)": 14,
+      "(-,+)": 3,
+      "(+,-)": 2,
+      "(+,+)": 1
+    }
+  },
+  "example": {
+    "sample_id": 1,
+    "phant_id": "A2F1",
+    "true_label": "Upper-right (x=+2.25, y=+2.25)"
+  }
+}
